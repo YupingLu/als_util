@@ -31,6 +31,7 @@ def getYRMS(fs):
     df = df[['XRMSAve','YRMSAve']]
     
     # remove extreme values
+    df = df[(df.XRMSAve < 53) & (df.XRMSAve > 40)]
     df = df[(df.YRMSAve < 53) & (df.YRMSAve > 40)]
     
     data = df.to_numpy()
@@ -66,6 +67,7 @@ def getYRMS1(fs):
     df = df.iloc[idx,:]
     
     # remove extreme values
+    df = df[(df.XRMSAve < 53) & (df.XRMSAve > 40)]
     df = df[(df.YRMSAve < 53) & (df.YRMSAve > 40)]
     
     data = df.to_numpy()
@@ -76,6 +78,7 @@ def getYRMS1(fs):
     print('YRMSAve STD: %.4f' % (data[:,1].std()))
 
 
-files = ["EPU_2019.10.16_00.00.raw.pickle.gz", "EPU_2019.10.17_00.00.raw.pickle.gz", "EPU_2019.10.18_00.00.raw.pickle.gz"]
+files = ["EPU_2019.10.16_00.00.raw.pickle.gz", "EPU_2019.10.17_00.00.raw.pickle.gz", \
+         "EPU_2019.10.18_00.00.raw.pickle.gz"]
 d1 = getYRMS(files)
 d2 = getYRMS1([files)
