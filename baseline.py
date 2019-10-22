@@ -80,5 +80,6 @@ def getYRMS1(fs):
 
 files = ["EPU_2019.10.16_00.00.raw.pickle.gz", "EPU_2019.10.17_00.00.raw.pickle.gz", \
          "EPU_2019.10.18_00.00.raw.pickle.gz"]
-d1 = getYRMS(files)
-d2 = getYRMS1([files)
+
+getYRMS(files)
+getYRMS1([files)
