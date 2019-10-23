@@ -1,0 +1,7 @@
+script/.DS_Store
+.DS_Store
+.ipynb_checkpoints
+__pycache__
+models/__pycache__
+datasets/__pycache__
+checkpoint
